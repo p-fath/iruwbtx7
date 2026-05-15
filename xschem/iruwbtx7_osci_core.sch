@@ -99,13 +99,14 @@ N 990 -860 1020 -860 {lab=rf_n}
 N 1020 -910 1020 -860 {lab=rf_n}
 N 1020 -910 1110 -910 {lab=rf_n}
 N 1110 -910 1110 -890 {lab=rf_n}
-N 1070 -900 1070 -860 {lab=rf_p}
-N 950 -900 1070 -900 {lab=rf_p}
+N 1050 -900 1050 -860 {lab=rf_p}
 N 950 -900 950 -890 {lab=rf_p}
 N 950 -920 950 -900 {lab=rf_p}
 N 1110 -920 1110 -910 {lab=rf_n}
-N 950 -830 950 -750 {lab=#net1}
+N 950 -900 1050 -900 {lab=rf_p}
+N 1050 -860 1070 -860 {lab=rf_p}
 N 1110 -830 1110 -750 {lab=#net2}
+N 950 -830 950 -750 {lab=#net1}
 C {sg13_lv_nmos.sym} 940 -550 0 1 {name=M1
 l=0.13u
 w=2.5u
@@ -212,31 +213,27 @@ wfeed=3.0e-6
 spiceprefix=X}
 C {lab_wire.sym} 1030 -780 3 1 {name=p11 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1030 -660 3 0 {name=p12 sig_type=std_logic lab=VSS}
-C {sg13_hv_rf_nmos.sym} 1090 -860 0 0 {name=M11
-l=0.45u
-w=100u
-ng=10
-m=3
-rfmode=1
-model=sg13_hv_nmos
-lvs_model=rfnmoshv
-spiceprefix=X
-}
-C {lab_wire.sym} 950 -860 0 0 {name=p13 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 1110 -860 0 1 {name=p14 sig_type=std_logic lab=VSS}
-C {sg13_hv_rf_nmos.sym} 970 -860 0 1 {name=M12
-l=0.45u
-w=100u
-ng=10
-m=3
-rfmode=1
-model=sg13_hv_nmos
-lvs_model=rfnmoshv
-spiceprefix=X
-}
 C {iopin.sym} 950 -920 3 0 {name=p16 lab=rf_p}
 C {iopin.sym} 1110 -920 3 0 {name=p17 lab=rf_n}
 C {ipin.sym} 450 -710 0 0 {name=p18 lab=VA[4:0]}
 C {ipin.sym} 450 -680 0 0 {name=p19 lab=VB[4:0]}
 C {iopin.sym} 1010 -500 0 0 {name=p5 lab=VSS}
 C {title-3.sym} 0 0 0 0 {name=l41 author="Patrick Fath" page=1 pages=1 title="7 GHz IR-UWB TX" rev=1.0 lock=false}
+C {sg13_lv_nmos.sym} 1090 -860 0 0 {name=M12
+l=0.45u
+w=100u
+ng=10
+m=3
+model=sg13_lv_nmos
+spiceprefix=X
+}
+C {sg13_lv_nmos.sym} 970 -860 0 1 {name=M11
+l=0.45u
+w=100u
+ng=10
+m=3
+model=sg13_lv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 950 -860 0 0 {name=p13 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1110 -860 0 1 {name=p14 sig_type=std_logic lab=VSS}

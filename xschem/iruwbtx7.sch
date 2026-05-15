@@ -26,7 +26,6 @@ T {-) Supply voltage limited to ~1.5V due to digital parts (nmos_lv used!), but 
 T {Power ~3.5mW} 660 -510 0 0 0.4 0.4 {}
 T {Power ~13.5mW} 1100 -470 0 0 0.4 0.4 {}
 T {Power ~17.2mW} 1520 -750 0 0 0.4 0.4 {}
-N 980 -910 980 -840 {lab=rf_osci_p}
 N 1120 -970 1120 -940 {lab=rf_osci_p}
 N 1320 -880 1320 -840 {lab=rf_osci_n}
 N 1160 -940 1320 -940 {lab=rf_osci_n}
@@ -36,8 +35,8 @@ N 980 -940 1120 -940 {lab=rf_osci_p}
 N 980 -840 1000 -840 {lab=rf_osci_p}
 N 980 -710 1100 -710 {lab=rf_osci_p}
 N 1210 -710 1320 -710 {lab=rf_osci_n}
-N 890 -660 1000 -660 {lab=VA[4:0]}
-N 890 -640 1000 -640 {lab=VB[4:0]}
+N 890 -660 1000 -660 {lab=VA[4..0]}
+N 890 -640 1000 -640 {lab=VB[4..0]}
 N 890 -620 970 -620 {lab=en_PA}
 N 970 -620 970 -510 {lab=en_PA}
 N 970 -510 1390 -510 {lab=en_PA}
@@ -55,7 +54,9 @@ N 980 -840 980 -710 {lab=rf_osci_p}
 N 1100 -710 1100 -690 {lab=rf_osci_p}
 N 1320 -840 1320 -710 {lab=rf_osci_n}
 N 1210 -710 1210 -690 {lab=rf_osci_n}
-C {iruwbtx7_osci_capBank.sym} 1150 -820 0 0 {name=xosci_capBank}
+N 980 -910 980 -840 {lab=rf_osci_p}
+C {iruwbtx7_osci_capBank.sym} 1150 -820 0 0 {name=xosci_capBank
+}
 C {iruwbtx7_osci_core.sym} 1150 -640 0 0 {name=xosci_core}
 C {iruwbtx7_osci_decoder.sym} 740 -610 0 0 {name=xosci_decoder}
 C {iruwbtx7_tank_inductor.sym} 1140 -1120 1 0 {name=xtank_inductor}
@@ -82,5 +83,5 @@ C {ipin.sym} 1450 -820 0 0 {name=p19 lab=ctrlG[3:0]}
 C {ipin.sym} 1450 -800 0 0 {name=p20 lab=ctrlM[2:0]}
 C {title-3.sym} 0 0 0 0 {name=l41 author="Patrick Fath" page=1 pages=1 title="7 GHz IR-UWB TX" rev=1.0 lock=false}
 C {lab_wire.sym} 1070 -510 0 0 {name=p21 sig_type=std_logic lab=en_PA}
-C {lab_wire.sym} 970 -660 0 0 {name=p22 sig_type=std_logic lab=VA[4:0]}
-C {lab_wire.sym} 970 -640 0 0 {name=p23 sig_type=std_logic lab=VB[4:0]}
+C {lab_wire.sym} 970 -660 0 0 {name=p22 sig_type=std_logic lab=VA[4..0]}
+C {lab_wire.sym} 970 -640 0 0 {name=p23 sig_type=std_logic lab=VB[4..0]}

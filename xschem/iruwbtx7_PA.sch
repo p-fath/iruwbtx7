@@ -33,7 +33,6 @@ N 1590 -1190 1820 -1190 {lab=rf_p}
 N 1290 -900 1290 -830 {lab=#net1}
 N 1590 -830 1820 -830 {lab=#net1}
 N 1820 -900 1820 -830 {lab=#net1}
-N 1290 -930 1820 -930 {lab=VSS}
 N 1590 -830 1590 -740 {lab=#net1}
 N 1290 -830 1590 -830 {lab=#net1}
 N 1280 -710 1350 -710 {lab=#net2}
@@ -43,6 +42,9 @@ N 960 -630 1300 -630 {lab=en_PA}
 N 950 -690 960 -690 {lab=en_PA}
 N 1300 -690 1300 -630 {lab=en_PA}
 N 1300 -690 1350 -690 {lab=en_PA}
+N 1530 -930 1820 -930 {lab=VSS}
+N 1530 -1010 1530 -930 {lab=VSS}
+N 1290 -930 1530 -930 {lab=VSS}
 C {iruwbtx7_balun.sym} 1530 -1430 1 0 {name=xbalun}
 C {cap_rfcmim.sym} 1420 -1620 1 1 {name=C2 
 model=cap_rfcmim
@@ -65,30 +67,9 @@ C {opin.sym} 1510 -1670 3 0 {name=p2 lab=outn}
 C {opin.sym} 1550 -1670 3 0 {name=p3 lab=outp}
 C {iruwbtx7_PA_capBank.sym} 1530 -1060 0 1 {name=xPA_capBank}
 C {ipin.sym} 1680 -1080 0 1 {name=p18 lab=ctrlM[2:0]}
-C {lab_wire.sym} 1530 -1010 3 0 {name=p4 sig_type=std_logic lab=VSS}
-C {sg13_hv_rf_nmos.sym} 1840 -930 0 1 {name=M2
-l=0.45u
-w=100.0u
-ng=10
-m=3
-rfmode=1
-model=sg13_hv_nmos
-lvs_model=rfnmoshv
-spiceprefix=X
-}
 C {ipin.sym} 1250 -930 0 0 {name=p6 lab=inp}
 C {ipin.sym} 1860 -930 0 1 {name=p8 lab=inn}
-C {sg13_hv_rf_nmos.sym} 1270 -930 0 0 {name=M1
-l=0.45u
-w=100.0u
-ng=10
-m=3
-rfmode=1
-model=sg13_hv_nmos
-lvs_model=rfnmoshv
-spiceprefix=X
-}
-C {iopin.sym} 1610 -930 2 0 {name=p9 lab=VSS}
+C {iopin.sym} 1520 -930 2 0 {name=p9 lab=VSS}
 C {iruwbtx7_PA_currentMirror.sym} 1500 -690 0 0 {name=xPA_currentMirror}
 C {lab_wire.sym} 1500 -740 1 0 {name=p5 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1480 -740 1 0 {name=p10 sig_type=std_logic lab=VDD}
@@ -100,3 +81,19 @@ C {ipin.sym} 950 -690 0 0 {name=p15 lab=en_PA}
 C {title-2.sym} 0 0 0 0 {name=l41 author="Patrick Fath" page=1 pages=1 title="7GHz IR-UWB TX" rev=1.0 lock=false}
 C {lab_wire.sym} 1330 -1190 0 0 {name=p11 sig_type=std_logic lab=rf_n}
 C {lab_wire.sym} 1720 -1190 0 0 {name=p17 sig_type=std_logic lab=rf_p}
+C {sg13_lv_nmos.sym} 1270 -930 0 0 {name=M2
+l=0.45u
+w=100u
+ng=10
+m=3
+model=sg13_lv_nmos
+spiceprefix=X
+}
+C {sg13_lv_nmos.sym} 1840 -930 0 1 {name=M1
+l=0.45u
+w=100u
+ng=10
+m=3
+model=sg13_lv_nmos
+spiceprefix=X
+}
