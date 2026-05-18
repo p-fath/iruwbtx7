@@ -54,7 +54,8 @@ value="
 .include iruwbtx7_tb.save
 *.options delmin=10p method=trap reltol=1e-4 vabstol=1e-6 iabstol=1e-12 gmin=1e-12 chgtol=1e-16 rshunt=1e12 trtol=1 pivotrel=1e-3 pivotabs=1e-13 noacct numdgt=7
 *.options klu keepopinfo method=Gear rshunt=1e12 gmin=1e-12 reltol=100e-06 abstol=1e-12 vntol=1e-06
-.options method=gear klu
+*.options method=gear klu reltol=1e-5 vabstol=1e-6 iabstol=1e-12 gmin=1e-12 temp=27 tnom=27 pivrel=1e-3 trtol=2 rshunt=1e12
+.options klu method=gear 
 
 .control
 set num_threads 1
@@ -63,7 +64,7 @@ save all
 op
 write iruwbtx7_tb.raw
 set appendwrite
-tran 0.5p 4n
+tran 0.5p 6n 0 5p
 write iruwbtx7_tb.raw
 plot trig 
 plot xiruwbtx7.VA2 xiruwbtx7.VB2 

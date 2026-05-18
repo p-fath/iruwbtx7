@@ -20,7 +20,7 @@ Specs:
 f_RF=7.06GHz
 DC Power=34.2mW (while sending of 2.6ns pulse)
 RF Power=4 dBm (@50 Ohm load)
-S11 = -21.1dB (single-ended; looking into PA; with bondwire and matching series capacitor)} 1440 -710 0 0 0.4 0.4 {}
+S11 = *dB (single-ended; looking into PA; with bondwire and matching series capacitor)} 1440 -710 0 0 0.4 0.4 {}
 T {-) Supply voltage limited to ~1.5V due to digital parts (nmos_lv used!), but output voltage swing could be higher due to nmos_hv.
 -) Balun designed as tradeof with min. L (due to min. C of capbank), max. Q and reasonable area and resonance frequency} 170 -260 0 0 0.4 0.4 {}
 T {Power ~3.5mW} 660 -510 0 0 0.4 0.4 {}
@@ -81,7 +81,7 @@ C {opin.sym} 1750 -860 0 0 {name=p15 lab=outp}
 C {opin.sym} 1750 -840 0 0 {name=p17 lab=outn}
 C {ipin.sym} 1450 -820 0 0 {name=p19 lab=ctrlG[3:0]}
 C {ipin.sym} 1450 -800 0 0 {name=p20 lab=ctrlM[2:0]}
-C {title-3.sym} 0 0 0 0 {name=l41 author="Patrick Fath" page=1 pages=1 title="7 GHz IR-UWB TX" rev=1.0 lock=false}
+C {title-3.sym} 140 -20 0 0 {name=l41 author="Patrick Fath" page=1 pages=1 title="7 GHz IR-UWB TX" rev=1.0 lock=false}
 C {lab_wire.sym} 1070 -510 0 0 {name=p21 sig_type=std_logic lab=en_PA}
 C {lab_wire.sym} 970 -660 0 0 {name=p22 sig_type=std_logic lab=VA[4..0]}
 C {lab_wire.sym} 970 -640 0 0 {name=p23 sig_type=std_logic lab=VB[4..0]}
